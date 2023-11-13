@@ -7,7 +7,7 @@ public class GameOverMenu : MonoBehaviour
 {
     void Start()
     {
-        
+       
     }
 
     void Update()
@@ -18,7 +18,8 @@ public class GameOverMenu : MonoBehaviour
     public void RestartMatch()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+        Time.timeScale = 1f;
+    } 
 
     public void ExitGame()
     {
