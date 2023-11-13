@@ -1,20 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float velocidadeDoJogador = 15;
     [SerializeField] int gatosSalvos;
     public Animator oAnimador;
-
+    public GameObject GameOverPainel;
 
     void Start()
     {
         oAnimador = GetComponent<Animator>();
     }
-
-    // Update is called once per frame
     void Update()
     {
         MovimentarJogador();
@@ -53,6 +52,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void GameOver()
     {
+        Time.timeScale = 0f;
+        GameOverPainel.SetActive(true);
         Debug.Log("Game Over");
     }
 }
