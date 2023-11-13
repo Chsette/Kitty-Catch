@@ -13,7 +13,12 @@ public class Brick : MonoBehaviour
             GetComponent<SpriteRenderer>().enabled = false;
             other.GetComponent<PlayerMovement>().GameOver();
             Destroy(this.gameObject, 0.6f);
+            hit.Play();
         }
-        hit.Play();
+        else
+        {
+            Destroy(this.gameObject, 0.6f);
+            hit.Play();
+        }
     }
 }

@@ -16,7 +16,7 @@ public class Kitty : MonoBehaviour
             other.GetComponent<PlayerMovement>().AumentarGatosSalvos();
             kittySaved.Play();
             Debug.Log("Kitty saved");
-            Destroy(this.gameObject, 0.6f); 
+            Destroy(this.gameObject, 0.5f); 
         }
         else
         {
